@@ -1,0 +1,145 @@
+/* Reset de Estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f5f7;
+    color: #333;
+    margin: 0;
+}
+
+.board {
+    background-color: #0079bf;
+    min-height: 100vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 50px 0; /* Aumenta o espaçamento vertical */
+}
+
+.container {
+    max-width: 900px;
+    padding: 30px;
+    display: flex;
+    flex-wrap: wrap; /* Permite que os elementos quebrem para a próxima linha */
+    gap: 40px; /* Espaçamento entre as seções */
+}
+
+.left,
+.right {
+    flex: 1; /* As seções ocupam a mesma largura */
+    min-width: 300px; /* Define uma largura mínima para as seções */
+}
+
+.left h1,
+.right h1 {
+    color: #fff;
+    margin-bottom: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    text-transform: uppercase; /* Transforma o texto em maiúsculas */
+}
+
+.left .add-task {
+    margin-bottom: 20px;
+}
+
+.add-task input[type="text"],
+.add-task input[type="number"] {
+    padding: 15px;
+    width: calc(100% - 150px); /* Largura dos inputs */
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+    font-size: 16px;
+    outline: none; /* Remove a borda de foco */
+}
+
+.add-task input[type="text"]::placeholder,
+.add-task input[type="number"]::placeholder {
+    color: #999; /* Cor do texto de espaço reservado */
+}
+
+.add-task button {
+    padding: 15px 30px;
+    background-color: #61bd4f;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+    outline: none;
+    min-width: 150px; /* Define uma largura mínima para os botões */
+}
+
+.add-task button:hover {
+    background-color: #5aac44;
+}
+
+.task-list {
+    list-style: none;
+    padding: 0;
+}
+
+.task-list li {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.task-list li.done {
+    background-color: #f2f2f2;
+    text-decoration: line-through;
+}
+
+#clearButton {
+    margin-top: 30px;
+    padding: 15px 30px;
+    background-color: #cf513d;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+    outline: none;
+    min-width: 150px; /* Define uma largura mínima para o botão de limpar */
+}
+
+#clearButton:hover {
+    background-color: #bf4d3b;
+}
+
+/* Adiciona espaço entre os elementos de entrada e o botão de adicionar */
+.add-task input[type="text"],
+.add-task input[type="number"],
+.add-task button {
+    margin-bottom: 10px; /* Adiciona espaço abaixo de cada elemento */
+}
+
+/* Adiciona espaço entre os elementos de entrada */
+.add-task input[type="text"],
+.add-task input[type="number"],
+.add-task input[type="text"],
+.add-task button {
+    margin-bottom: 10px;
+}
+
+/* Estilo para as tarefas importantes */
+.important {
+    color: red; /* Cor vermelha para destacar as tarefas importantes */
+}
+.task-list li {
+    transition: transform 0.3s ease;
+}
+
+.task-list li:hover {
+    transform: scale(1.1);
+}
