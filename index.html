@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tarefas</title>
+    <link rel="stylesheet" href="ToList/styles.css">
+</head>
+<body>
+    <div class="board">
+        <div class="container">
+            <div class="left">
+                <h1>Adicionar Tarefa</h1>
+                <div class="add-task">
+                    <input type="text" id="taskInput" placeholder="Adicionar nova tarefa...">
+                    <input type="number" id="urgencyInput" placeholder="Grau de urgência (1-5)">
+                    <input type="text" id="areaInput" placeholder="Área da tarefa (opcional)">
+                    <button onclick="addTask()">Adicionar</button>
+                </div>
+            </div>
+            <div class="right">
+                <h1>Áreas de Tarefas</h1>
+                <div id="areasContainer"></div>
+                <h1>Tarefas Importantes</h1>
+                <ul id="importantTasks" class="task-list"></ul>
+                <button id="clearButton">Limpar Tarefas</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="ToList/script.js"></script>
+</body>
+</html>
